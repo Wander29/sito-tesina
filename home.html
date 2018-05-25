@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Ludovico Venturi">
+
+        <title>Tesina Ludovico Venturi</title>
+        <link rel="icon" href="assets/img/favicon.png">
+
+        <link rel="stylesheet" href="lib/materialize-v1b/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC">
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/homepage.css">
+        
+        <script src="lib/jquery.js"></script>
+        <script src="lib/scrollReveal/scrollreveal.min.js"></script>
+        <script src="lib/materialize-v1b/materialize.min.js"></script>
+    </head>
+    <body>
+    <header class="my-cont">
+        <div class="fullscreen-video-wrap">
+            <video src="assets/vid/vid_bg.mp4" loop="true" autoplay="true"></video>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content center-align">
+            <div id="start-tab">
+                <div class="row">
+                    <div id="main-title"><h1>Tesina<span class="my-white"> 5°anno</span><br><bR>Maturità</h1></div>
+                    <p><span class="waves-effect waves-light">Ludovico Venturi <span class="my-white">5°AIA</span></span></p>
+                </div>
+                <a href="#login-tab"><button class="btn-home waves-effect waves-light orange" id='btn-log'>LOG IN</button></a> 
+            </div>
+            <div id="login-tab" class="dn">
+                <div class="row">
+                    <div id="main-title"><h1>Gatto<span class="my-white"> 5°anno</span><br><bR>Maturità</h1></div>
+                    <p><span class="waves-effect waves-light">Ludovico Venturi <span class="my-white">5°AIA</span></span></p>
+                </div>
+                <a href="pages/strumenti.html"><button class="btn-home waves-effect waves-light orange">LOG IN</button></a> 
+            </div>
+        </div>
+    </header>        
+<script>
+    window.sr = ScrollReveal();
+    if(window.innerWidth > 700)
+    {
+        sr.reveal('.btn-home', {
+            duration: 2000,
+            origin: 'right',
+            distance: '400px'
+        });
+
+        sr.reveal('#main-title', {
+            duration: 2000,
+            origin: 'top',
+            delay: 100
+        });
+
+        sr.reveal('.header-content p', {
+            duration: 2000,
+            origin: 'left',
+            delay: 500,
+            distance: '500px'
+        });
+    }
+
+    $(document).ready(function(){
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+              }
+            }
+        });
+        $('#btn-log').click(function(){
+            $('#start-tab').toggleClass('dn');
+            $('#login-tab').toggleClass('dn');
+            sr.reveal('#login-tab', {
+                duration: 1000,
+                origin: 'top',
+                distance: '50px'
+            });
+        })
+    });
+</script>
+    </body>
+</html>

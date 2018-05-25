@@ -1,0 +1,222 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Relazione di laboratorio">
+        <meta name="author" content="Ludovico Venturi">
+        <base target="_blank">
+        <title>RDL Alternanza</title>
+        <link rel="icon" href="../assets/img/favicon.png">
+        <link rel="stylesheet" href="../lib/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+        <script src="../lib/scrollReveal/scrollreveal.min.js"></script>
+    </head>
+    <body>
+        <nav class="my-navbar" id="my-navbar" class="container-fluid">
+            <div class="col-md-3">
+                <a href="../home.html" target="_self" ><div id="home"><i class="fa fa-home fa-2x fa-pull-left" aria-hidden="true"><span> Home</span></i></div></a>
+            </div>
+            <div class="col-md-9">
+                <ul class="my-nav-list" align="center">
+                    <li><a target="_self" href="strumenti.html">STRUMENTI</a></li>
+                    <li><a target="_self" href="introduzione.html">INTRODUZIONE</a></li>
+                    <li><a target="_self" href="svolgimento.html">SVOLGIMENTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="scroll-up"><img src="../assets/img/scroll-up2.png"></div>
+        <div id="progBar" class="progress-bar"></div>
+        <div id="progBarFake" class="progress-bar"></div>
+        <nav id="side-menu" class="side-nav">
+            <ul>
+<!--                <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>-->
+                <li><a href="#sec1">Realizzazione</a></li>
+                    <ul class="list-ch1">
+                        <li><a href="#sec1-1">Entità</a></li>
+                        <li><a href="#sec1-2">Relazioni</a></li>
+                        <li><a href="#sec1-3">Regole di Lettura</a></li>
+                        <li><a href="#sec1-4">Modello Logico</a></li>
+                    </ul>
+                <li><a href="#sec2">Query</a></li>
+                    <ul class="list-ch1">
+                        <li><a href="#sec2-1">Query 1</a></li>
+                        <li><a href="#sec2-2">Query 2</a></li>
+                    </ul>
+                <li><a href="#sec2">Conclusioni</a></li>
+            </ul>
+        </nav>
+        
+        <div id="my-main-container" class="col-9">
+            <div id="sec1">
+                <h1><span data-toggle="tooltip" data-placement="right" data-html="true" title="Ludovico <b>Venturi</b>">Realizzazione</span></h1>
+                <section>
+                <p>
+                    Per realizzare concretamente il database e passare quindi da un modello concettuale a logico, e, successivamente, ad un DBMS si procede come prima cosa redigendo la lista delle entità con i realtivi attributi. <br>
+                    Successivamente si  individuano le relazioni tra le entitá  e si continua applicando le <b>regole di derivazione</b>.
+                    Infine si crea la struttura E/R individuata in un DBMS, come MySQL, in modo da poterci lavorare.
+                </p>
+                </section>
+            </div>
+            <section id="sec1-1">
+                <h2>Entità</h2>
+                <ul>
+                    <li>
+                        <b>Tutor Scolastico</b>: ( {CodTutSc}, Nome, Cognome, CodFisc )
+                    </li>
+                    <li>
+                        <b>Specializzazione</b>: ( {CodSpec}, Nome )
+                    </li>
+                    <li>
+                        <b>Classe</b>: ( {CodClas}, NomeClasse, AnnoScolastico, FK_TutSc, FK_Spec )
+                    </li>
+                    <li>
+                        <b>Alunno</b>: ( {CodAlu}, Nome, Cognome, CodFisc, DataNasc, FK_classe )
+                    </li>
+                    <li><b>Tirocinio</b>: ( {CodTir}, Inizio, Fine, TotOre, Descr, ValTest, ValVoto, FK_alu, FK_azienda )
+                    </li>
+                    <li>
+                        <b>Diario</b>: ( {CodDia}, Data, TipoAtt, Descr, Ore, FK_tirocinio )
+                    </li>
+                    <li>
+                        <b>Azienda</b>: ( {CodAz}, Nome, PIVA, NomeRap, SedeLegale, SedeTirocinio, Telefono, Email )
+                    </li>
+                    <li>
+                        <b>Tutor Aziendale</b>: ( {CodTutAz}, Nome, Cognome, CodFisc, Telefono, Email, DataNasc )
+                    </li>
+                </ul>
+                <p>
+                    Sono poi stati aggiunti degli attributi aggiuntivi nel DB per implementare delle funzioni al futuro sito di inserimento/visualizzazione dati.
+                </p>
+                <p>
+                    In particolare, per l'autenticazione degli utenti:
+                    <ul>
+                        <li>
+                            <b>Alunno</b>: ( Email, Password )
+                        </li>
+                        <li>
+                            <b>Tutor Scolastico</b>: ( Email, Password )
+                        </li>
+                    </ul>
+                    <br>
+                    Per la visualizzazione della Mappa interattiva delle aziende:
+                    <ul>
+                        <li>
+                            <b>Azienda</b>: ( Latitudine, Longitudine )
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section id="sec1-2">
+                <h2>Relazioni</h2>                
+                <p>
+                    <ul>
+                        <li>Tutor Scolastico - Classe: <b>1 : N</b></li>
+                        <li>Specializzazione - Classe: <b>1 : N</b></li><br>
+                        <li>Classe - Alunno: <b>1 : N</b></li><br>
+                        <li>Alunno - Tirocinio: <b>1 : N</b></li><br>
+                        <li>Tirocinio - Diario: <b>1 : N</b></li>
+                        <li>Tirocinio - Azienda: <b>N : 1</b></li><br>
+                        <li>Azienda - Tutor Aziendale: <b>1 : N</b></li>
+                    </ul>
+                </p>
+            </section>
+            <section id="sec1-3">
+                <h2>Regole di Lettura</h2>
+                <p>
+                    <ul>
+                        <li>Una o più classi appartengono ad una specializzazione</li>
+                        <li>Una specializzazione ha una o più classi</li>
+                        <li>Ogni classe ha un Tutor Scolastico</li>
+                        <li>Ogni Tutor Scolastico puó gestire una o più classi</li><br>
+                        <li>Ogni classe è formata da più alunni</li>
+                        <li>Ogni alunno fa parte di una classe</li><br>
+                        <li>Ogni alunno può svolgere più tirocini</li>
+                        <li>Ogni tirocinio viene svolto da un solo alunno</li><br>
+                        <li>Ogni tirocinio contiente più diari</li>
+                        <li>Un diario apartiene ad un solo tirocinio</li><br>
+                        <li>Un tirocinio viene svolto in una sola azienda</li>
+                        <li>Ogni azienda può ospitare più tirocini</li><br>
+                        <li>Ogni azienda ha uno o più Tutor aziendali</li>
+                        <li>Ogni Tutor aziendale lavora in una sola azienda</li>
+                    </ul> 
+                </p>
+            </section>
+            <section id="sec1-4">
+                <h2>Modello Logico E/R</h2>
+                <img src="../img/mod_log.png" style="width: 94%">
+                Il risultato della struttura trattata sopra è il database riportato in foto.
+                <p>
+                    Si è ora pronti per ricreare tale struttura in <b>MySQL</b> tramite l'interfaccia <b>PhpMyAdmin</b>.
+                </p>
+                <p>
+                    Il <b>database</b> creato (e con dati di prova inseriti) è <b>scaricabile</b> cliccando sul link sottostante.
+                </p>
+                <p>
+                    <br><div class="download"><a href="https://mega.nz/#!lYwm3DrT!PiZVWlesZNtqhHyUVGzp4l_kf6mE9XtcD3SyKOkPCEs">Download<img src="../assets/img/mega.png"></a></div><br>
+                </p>
+            </section>
+            <div id="sec2">
+                <h1><span data-toggle="tooltip" data-placement="right" data-html="true" title="Ludovico <b>Venturi</b>">Query</span></h1>
+                <section>
+                Per verificare il corretto funzionamento della struttura del Database si effettueranno 2 query SQL sul db. <br>Verranno riportati sotto al codice i risultati delle stesse.
+                </section>
+            </div>
+            <section id="sec2-1">
+                <h2>Query 1</h2>
+                <p>
+                    <i>Selezionare tutti gli studenti che hanno effettuato lo Stage sotto la supervisione del tutor aziendale "Alessandro Ocagli"</i>
+                </p>
+                <p>
+                    <span class="codice">
+                    SELECT al.Cognome, al.Nome <br>
+                    FROM alunno AS al, tirocinio AS t, tutor_aziendale AS ta <br> 
+                    WHERE ta.Nome = "Alessandro" AND ta.Cognome = "Ocagli" AND ta.FKAz = t.FKAz AND t.FKAlu = al.CodAlu <br> 
+                    GROUP BY al.Nome, al.Cognome <br> 
+                    ORDER BY al.Cognome </span> <br>
+                </p>
+                <img src="../img/query1.png" style="width: 24%">
+            </section>
+            <section id="sec2-2">
+                <h2>Query 2</h2>
+                <p>
+                    <i>Selezionare l'azienda che ha ospitato più tirocini</i>
+                </p>
+                <p>
+                    <span class="codice">
+                        SELECT a.Nome, MAX(x.val)  AS numTirocini <br>
+                        FROM ( <br>
+                        SELECT COUNT(*) AS val <br>
+                        FROM azienda AS a, tirocinio AS t <br>
+                        WHERE t.FKAz = a.CodAz <br>
+                        GROUP BY a.CodAz <br>
+                        ) AS x, azienda AS a
+                    </span>
+                </p>
+                <img src="../img/query2.png" style="width: 24%">
+            </section>
+            <hr>
+            <div id="sec3">
+                <h1><span data-toggle="tooltip" data-placement="right" data-html="true" title="Ludovico <b>Venturi</b>">Conclusioni</span></h1>
+                <p>
+                    Al termine della realizzazione del progetto si è riusciti a creare e a testare il database relativo all'alternanza Scuola-lavoro.
+                </p>
+                <p>
+                    Tramite l' esercizio è stato possibile consolidare quanto appreso durante le lezioni teoriche di Informatica ponendoci davanti ad un progetto in cui si potevano prendere deicisoni autonome.
+                </p>
+            </div>
+            <br><br><br>
+            <b>
+                <i>É in corso la costruzione del sito relativo alla Visualizzazione e all'Inserimento dei dati tramite PHP (sará presente anche una mappa di Google Maps interattiva con la locazione delle aziende)</i>
+            </b>
+        <div class="spazio"></div>
+        <script src="../lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+        <script src="../lib/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/scrollSpy/scrollspy.min.js"></script>
+        <script>
+            $("#side-menu").scrollspy({ offset: 10 });
+        </script>
+        <script src="../assets/js/js.js"></script>
+    </body>
+</html>

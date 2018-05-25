@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Ludovico Venturi">
+        <base target="_blank">
+
+        <title>Tesina Ludovico Venturi</title>
+        <link rel="icon" href="../assets/img/favicon.png">
+
+        <link rel="stylesheet" href="../lib/materialize-v1b/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC">
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+        <script src="../lib/scrollReveal/scrollreveal.min.js"></script>
+    </head>
+    <body>
+        <nav class="my-navbar" id="my-navbar" class="container-fluid">
+            <div class="col-md-3">
+                <a href="../home.html" target="_self" ><div id="home"><i class="fa fa-home fa-2x fa-pull-left" aria-hidden="true"><span> Home</span></i></div></a>
+            </div>
+            <div class="col-md-9">
+                <ul class="my-nav-list" align="center">
+                    <li><a target="_self" href="strumenti.html">STRUMENTI</a></li>
+                    <li><a target="_self" href="introduzione.html">INTRODUZIONE</a></li>
+                    <li><a target="_self" href="svolgimento.html">SVOLGIMENTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="scroll-up"><img src="../assets/img/scroll-up2.png"></div>
+        <div id="progBar" class="progress-bar"></div>
+        <div id="progBarFake" class="progress-bar"></div>
+        <nav id="side-menu" class="side-nav">
+            <ul>
+<!--                <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>-->
+                <li><a href="#sec1">Progetto</a></li>
+                    <ul class="list-ch1">
+                        <li><a href="#sec1-1">Analisi</a></li>
+                        <li><a href="#sec1-2">Ipotesi Aggiuntive</a></li>
+                        <li><a href="#sec1-3">Modello Concettuale</a></li>
+                    </ul>
+            </ul>
+            <div id="copyright"><i class="fa fa-copyright"></i> 2018 Ludovico Venturi</div></div>
+        </nav>
+        <div id="my-main-container" class="col-9">
+            <div id="sec1">
+                <h1><span data-toggle="tooltip" data-placement="right" data-html="true" title="Ludovico <b>Venturi</b>">Progetto</span></h1>
+                <section>
+                    <p>
+                        Il progetto da realizzare durante gli incontri pomeridiani di Alternanza Scuola-lavoro riguarda la realizzazione di un <b>database</b> inerente l'attività di stage svolto dagli alunni della scuola.
+                    </p>
+                    <p>
+                        Si vuole, essenzialmente, gestire tutte le informazioni di tale attività in un Database in modo da archiviarle nel modo più conveniente possibile.
+                    </p>
+                    <p>
+                        Archiviare i dati in un Database permette di organizzare le informazioni in modo ordinato e più sicuro, evitando ridodanza dei dati.
+                    </p>
+                </section>
+            </div>
+            <section id="sec1-1">
+                <h2>Analisi</h2>
+                <p>
+                    Il testo specifica di non voler realizzare un database di tutta la scuola ma solamente di una classe. Si è però scelto di ampliare l`esercizio e di implementare tale caratteristica.
+                </p>
+                <p>
+                    Le informazioni che si vogliono archiviare sono le seguenti:
+                    <ul>
+                        <li>Anagrifica Utenti</li>
+                        <li>Anagrafica Aziende</li><br>
+                        <li>Dati Tutor Aziendale</li>
+                        <li>Dati Tutor Scolastico</li>
+                        <li>Informazioni Tirocinio</li>
+                        <li>Diari Giornalieri tirocini</li>
+                    </ul>
+                </p>
+                <p><br>
+                    Per quanto riguarda le aziende si vuole salvare: 
+                    <ul>
+                        <li>Denominazione Aziendale</li>
+                        <li>Partitva IVA</li>
+                        <li>Nome del Legale Rappresentante</li>
+                        <li>Sede Legale</li>
+                        <li>Sede del Tirocinio</li>
+                        <li>Contatti telefonici</li>
+                        <li>E-mail</li>
+                        <li>Nome del Tutor Aziendale</li>
+                    </ul>
+                </p><br>
+                <p>
+                    Per il Tirocinio invece devono essere archiviati i seguenti dati:
+                    <ul>
+                        <li>Sede di Lavoro</li>
+                        <li>Data di Inizio</li>
+                        <li>Data di Fine</li>
+                        <li>Ore Totali svolte</li>
+                        <li>Descrizione attività svolta</li>
+                        <li>Valutazione Testuale</li>
+                        <li>Valutazione Numerica</li>
+                    </ul>
+                    Ovviamente ogni azienda può ospitare più tirocini di più studenti.
+                </p>
+                <p>
+                    Per l'implementazione di più classi e specializzazioni si sono aggiunte anche 2 entità, ovvero Classe e specializzazione.
+                </p>
+            </section>
+            <section id="sec1-2">
+                <h2>Ipotesi Aggiuntive</h2>
+                <p>
+                    Si è ipotizzato che ogni classe possa avere UN solo tutor scolastico e che questo possa invece gestire più classi.
+                </p>
+                <p>
+                    Si immagina invece che i tutor aziendali possano essere uno o più di uno per ogni azienda (ad esempio per un'azienda che si occupa di più settori, come Chimica e Meccanica).
+                </p>
+            </section>
+            <section id="sec1-3">
+                <h2>Modello Concettuale</h2>
+                <p>
+                    Il modello <b>concettuale</b> ha l'obiettivo di spiegare la struttura del database che si ha in mente e che si vuole realizzare senza perdersi in dettagli tecnici. <br>
+                    Il modello concettuale risultante è questo:
+                </p>
+                <img src="../img/mod_conc.PNG" style="width: 94%">
+            </section>
+            
+        <div class="spazio"></div>
+        <script src="../lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+        <script src="../lib/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/scrollSpy/scrollspy.min.js"></script>
+        <script>
+            $("#side-menu").scrollspy({ offset: 10 });
+        </script>
+        <script src="../assets/js/js.js"></script>
+    </body>
+</html>
