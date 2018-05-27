@@ -8,12 +8,9 @@
 
         <title>Tesina Ludovico Venturi</title>
         <link rel="icon" href="assets/img/favicon.png">
-
-        <link rel="stylesheet" href="lib/materialize-v1b/materialize.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC">
-
+        
+        <link rel="stylesheet" href="lib/materialize-v1b/css/materialize.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/fonts.css">
         <link rel="stylesheet" href="assets/css/homepage.css">
         
         <script src="lib/jquery.js"></script>
@@ -24,19 +21,19 @@
 
     <div class="my-cont">
         <div class="fullscreen-video-wrap">
-            <video src="assets/vid/vid_bg.mp4" loop="true" autoplay="true"></video>
+            <video src="assets/vid/vid_talk.mp4" loop="true" autoplay="true"></video>
         </div>
         <div class="header-overlay"></div>
         <div class="header-content">
             <div id="start-tab">
                 <div class="row">
-                    <div id="main-title"><h1>Tesina<span class="my-white"> 5°anno</span><br><bR>Maturità</h1></div>
+                    <div id="main-title"><h1>Tesina<span class="my-white"> 5°anno</span> Maturità<br><br>Limiti</h1></div>
                     <p><span class="waves-effect waves-light">Ludovico Venturi <span class="my-white">5°AIA</span></span></p>
                 </div>
-                <a href="#login-tab"><button class="btn-home waves-effect waves-light orange" id='btn-log'>LOG IN</button></a> 
+                <div class="enter-btn waves-effect waves-light" id='btn-log'><a href="#login-tab">ENTRA</a></div>
             </div>
 
-            <div id="login-tab" class="hide-tab largo">
+            <div id="login-tab" class="hide-tab">
                 <div class="row">
                     <div id="main-title"><h1>Autenticazione<br></h1></div>
                 </div>
@@ -78,16 +75,14 @@
                         </div>
                     </form>
                 </div>
-
-                <div class="progress_cont dn">
-                    <div class="progress">
-                        <div class="indeterminate"></div>
-                    </div>
-                </div>
-
             </div> <!-- login-tab -->
         </div> <!-- header-content -->
-    </div>  <!-- my-cont -->      
+    </div>  <!-- my-cont -->   
+    <div class="progress_cont dn">
+        <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+    </div>   
 
     <script src="assets/js/home_js.js"></script>
     <script src="assets/js/home_login_ajax.js"></script>

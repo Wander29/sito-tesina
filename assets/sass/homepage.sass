@@ -1,0 +1,104 @@
+@charset 'utf-8'
+@import ../../lib/materialize-v1b/css/materialize.css
+@import "https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC"
+@import ../css/fonts.css
+@import _global
+
+.my-cont
+	padding-left: 1rem
+	padding-right: 1rem
+	margin: auto
+	text-align: center
+	height: 100vh
+	display: flex
+	align-items: center
+	color: #FFF
+
+	.fullscreen-video-wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100vh
+		overflow: hidden
+
+		video
+			min-height: 100%
+			min-width: 100%
+	#main-title
+		text-shadow: 3px 3px 20px #FFF
+// Copre tutta la pagina (sfondo sopra al video)
+.header-overlay 
+	height: 100vh
+	position: absolute
+	top: 0
+	left: 0
+	width: 100vw
+	z-index: 1
+	background-color: $pr-color
+	opacity: 0.65
+
+.header-content
+	z-index: 2
+	color: black
+	margin: auto
+
+	h1
+		font-size: 3rem
+		margin-bottom: 0
+	p
+		font-size: 1.5rem
+		display: block
+		margin-bottom: 2rem
+		margin-top: 2rem
+
+		>span
+			background-color: $pr-color
+			border-radius: 10px
+			padding: 10px
+			+box-shadow(0, 0, 30px, 30px, $pr-color)
+
+#start-tab
+	.enter-btn
+		border: 2px solid white
+		background: $pr-color
+		color: #FFF
+		font-size: 1.2rem
+		padding: 1rem 2rem
+		cursor: pointer
+		opacity: 0.6
+		+transition(box-shadow, 0.4s)
+		+border-radius(50px)
+		@extend %bshdw-hover1
+
+	.enter-btn:hover
+		opacity: 1
+		@extend %bshdw-hover2
+
+#login-tab
+	width: 60vw !important
+	z-index: 5
+	visibility: hidden
+
+	#wrap-login 
+		background-color: #FFF
+		padding: 30px 30px 15px 30px
+		+border-radius(30px)
+		z-index: 4
+
+	#wrap-ospite
+		padding: 30px 30px 15px 30px
+		background-color: #CC0A6E
+		margin: 0
+		border-radius: 30px
+
+	.btn-submit-aut 
+		border: 1px solid black
+		opacity: 0.6
+	.btn-submit-aut:hover
+		opacity: 1
+
+@media(max-width: 500px)
+.my-cont
+	padding-right: 3rem
+	padding-left: 3rem

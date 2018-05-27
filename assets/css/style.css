@@ -4,10 +4,6 @@
     --bgSide: #111;
     --sideFont: #ccc;
 }
-font-family: 'Assistant', sans-serif;
-font-family: 'Nunito', sans-serif;
-font-family: 'Vollkorn SC', serif;
-font-family: 'Poiret One', cursive;
 
 *{ /* toglie i pixel di margine di default alla pagina */
     margin: 0;
@@ -21,16 +17,6 @@ html{
 body{
     overflow-x: hidden; /* non mostra contenuti oltre la larghezza della viewport */
     line-height: 1.2;
-}
-
-    /* SELEZIONE MOUSE CLICK */
-::-moz-selection{
-    background: var(--oro);
-    color: white;
-}
-::selection{
-    background: var(--oro);
-    color: white;
 }
 
 h1{

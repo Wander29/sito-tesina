@@ -1,0 +1,62 @@
+//Variabili
+$pr-color: #FF006A
+
+//Mixins
+=border-radius($radius) //Mixin, una sorta di funzione, richiamabil con +border-radius(parametri)
+  -moz-border-radius:         $radius
+  -o-border-radius:           $radius
+  -webkit-border-radius:      $radius
+  border-radius:              $radius
+
+=box-shadow($h-off, $v-off, $blur, $spread, $col) //h-offset v-offset blur spread color
+  -moz-box-shadow:            $h-off  $v-off $blur $spread $col 
+  -o-box-shadow:              $h-off  $v-off $blur $spread $col 
+  -webkit-box-shadow:         $h-off  $v-off $blur $spread $col 
+  box-shadow:                 $h-off  $v-off $blur $spread $col 
+
+=transition($what, $time)
+  -moz-transition:        $what $time // Mozilla
+  -o-transition:          $what $time // Opera
+  -webkit-transition:     $what $time // Safari
+  transition:             $what $time
+
+//Classi supporto
+%dn //da usare con @extend %dn
+  display: none
+%bshdw-normale
+  +box-shadow(10px, 10px, 15px, 10px, #dedede)
+
+%bshdw-hover1
+  +box-shadow(0, 0, 0, 20px, rgba(255,255,255,0))
+%bshdw-hover2
+  +box-shadow(0, 0, 0, 0, white)
+
+/* SELEZIONE MOUSE CLICK */
+::-moz-selection
+  background: $pr-color
+  color: white
+::-o-selection
+  background: $pr-color
+  color: white
+::-webkit-selection
+  background: $pr-color
+  color: white
+::selection
+  background: $pr-color
+  color: white
+
+//Classi supporto
+.my-white
+  color: white
+
+.tooltip-text-view
+  color: gray !important
+  cursor: pointer
+  padding: 10px
+
+.progress_cont
+  position: fixed
+  z-index: 9
+  top: -8px
+  left: 0vw
+  width: 100vw

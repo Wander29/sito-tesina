@@ -9,6 +9,11 @@
          url('../fonts/century-gothic/CenturyGothic.svg#CenturyGothic') format('svg');
 }
 
+font-family: 'Assistant', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Vollkorn SC', serif;
+font-family: 'Poiret One', cursive;
+
 /* MATERIAL ICONS */
 @font-face {
   font-family: 'Material Icons';
