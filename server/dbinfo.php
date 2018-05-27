@@ -1,6 +1,6 @@
 <?php 
 	$server = 'localhost';
-	$usr = 'tesina';
-	$psw = 'tesiLudo2018';
+	$usr = 'root';
+	$psw = '';
 	$db = 'tesina';
 ?>

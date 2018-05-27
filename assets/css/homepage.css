@@ -1,6 +1,12 @@
 @import url(../../lib/materialize-v1b/css/materialize.css);
 @import "https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC";
-@import url(../css/fonts.css);
+@import url(../fonts/fonts.css);
+.shdw {
+  -moz-box-shadow: 10px 10px 15px 10px #dedede;
+  -o-box-shadow: 10px 10px 15px 10px #dedede;
+  -webkit-box-shadow: 10px 10px 15px 10px #dedede;
+  box-shadow: 10px 10px 15px 10px #dedede; }
+
 #start-tab .enter-btn {
   -moz-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   -o-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
@@ -44,6 +50,22 @@
   top: -8px;
   left: 0vw;
   width: 100vw; }
+
+.white {
+  color: white !important; }
+
+.spazio {
+  height: 100px; }
+
+.dn {
+  display: none; }
+
+.hide-tab {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  display: none; }
 
 .my-cont {
   padding-left: 1rem;
@@ -119,26 +141,26 @@
 
 #login-tab {
   width: 60vw !important;
-  z-index: 5;
-  visibility: hidden; }
+  z-index: 5; }
   #login-tab #wrap-login {
-    background-color: #FFF;
+    opacity: 0.8;
+    background-color: #FFEDF5;
     padding: 30px 30px 15px 30px;
     -moz-border-radius: 30px;
     -o-border-radius: 30px;
     -webkit-border-radius: 30px;
-    border-radius: 30px;
-    z-index: 4; }
+    border-radius: 30px; }
   #login-tab #wrap-ospite {
     padding: 30px 30px 15px 30px;
-    background-color: #CC0A6E;
+    background-color: #FF9EDD;
     margin: 0;
     border-radius: 30px; }
   #login-tab .btn-submit-aut {
-    border: 1px solid black;
+    border: 1px dotted black;
     opacity: 0.6; }
   #login-tab .btn-submit-aut:hover {
-    opacity: 1; }
+    opacity: 1;
+    background-color: #FC3571; }
 
 @media(max-width: 500px);
 .my-cont {

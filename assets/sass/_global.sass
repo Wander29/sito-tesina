@@ -1,5 +1,10 @@
+@charset 'utf-8'
+@import ../../lib/materialize-v1b/css/materialize.css
+@import "https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC"
+@import ../fonts/fonts.css
 //Variabili
 $pr-color: #FF006A
+$sec-color: #FC3571
 
 //Mixins
 =border-radius($radius) //Mixin, una sorta di funzione, richiamabil con +border-radius(parametri)
@@ -20,10 +25,8 @@ $pr-color: #FF006A
   -webkit-transition:     $what $time // Safari
   transition:             $what $time
 
-//Classi supporto
-%dn //da usare con @extend %dn
-  display: none
-%bshdw-normale
+//Classi supporto, da usare con @extend %[nome]
+%bshdw-normale 
   +box-shadow(10px, 10px, 15px, 10px, #dedede)
 
 %bshdw-hover1
@@ -60,3 +63,22 @@ $pr-color: #FF006A
   top: -8px
   left: 0vw
   width: 100vw
+
+.shdw
+  @extend %bshdw-normale 
+
+.white
+  color: white !important
+
+.spazio
+  height: 100px
+
+.dn
+  display: none
+
+.hide-tab
+  opacity: 0
+  position: absolute
+  top: 0
+  visibility: hidden
+  display: none

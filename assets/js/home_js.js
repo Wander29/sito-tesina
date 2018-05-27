@@ -33,6 +33,7 @@ window.sr = ScrollReveal();
               }
             }
         });
+
         $('#btn-log').click(function(){
             $('#login-tab').css({'visibility' : 'visible'});
             $('#start-tab').toggleClass('hide-tab');
@@ -42,14 +43,14 @@ window.sr = ScrollReveal();
                 origin: 'top',
                 distance: '50px'
             });
-            $('#wrap-login').css({'opacity' : 0.7});
         })
     });
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var options = {
-        'html'          : true
+        'html'          : true,
+        'margin'        : -6
     }
     var instances = M.Tooltip.init(elems, options);
 });

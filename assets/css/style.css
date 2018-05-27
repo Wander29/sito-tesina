@@ -410,26 +410,3 @@ a:link{
 @media(min-width:880px){
 }
 
-/* SUPPORT CLASSES */
-.shdw{
-    -moz-box-shadow:  10px  10px 15px #dedede;
-    -webkit-box-shadow:  10px  10px 15px #dedede;
-}
-.white{
-    color: white !important;
-}
-
-.spazio{
-    height: 100px;
-}
-
-.dn{
-    display: none;
-}
-
-.hide-tab{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-}
-

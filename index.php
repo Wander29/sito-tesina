@@ -35,11 +35,11 @@
 
             <div id="login-tab" class="hide-tab">
                 <div class="row">
-                    <div id="main-title"><h1>Autenticazione<br></h1></div>
+                    <div id="main-title"><h1>autenticazione<br></h1></div>
                 </div>
                 <div class="row">
                     <!-- LOGIN UTENTE -->
-                    <form id="login_ut" action="server/_loginUt.php" enctype="multipart/form-data" autocomplete="off">
+                    <form id="login_ut" action="server/_loginUt.php" enctype="multipart/form-data" autocomplete="off" method="POST">
                         <div id="wrap-login" class="col s7">
                             <div class="row">
                                 <div class="input-field col s12">
@@ -60,7 +60,7 @@
                     </form>
                     <div class="col s1"></div>
                     <!-- LOGIN OSPITE -->
-                    <form method="post" action="server/_loginOsp.php" enctype="multipart/form-data" autocomplete="off" id="login_osp">
+                    <form method="post" action="server/_loginOsp.php" enctype="multipart/form-data" autocomplete="off" id="login_osp" method="GET">
                         <div id="wrap-ospite" class="col s4">
                             <div class="row" align="center">
                                 <div align="center"><button class="waves-effect waves-green btn btn-flat btn-submit-aut" action="submit" name="action">OSPITE</button></div>
@@ -85,6 +85,6 @@
     </div>   
 
     <script src="assets/js/home_js.js"></script>
-    <script src="assets/js/home_login_ajax.js"></script>
+    <script src="server/ajax/home_login.js"></script>
     </body>
 </html>

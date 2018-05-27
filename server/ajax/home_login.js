@@ -9,7 +9,7 @@ $(document).ready(function() {
             data = {};
        
         var formData = { //valori del form inseriti
-            'utente'            : $('#utente').val(),
+            'ut'            : $('#utente').val(),
             'psw'               : $('#psw').val()
         };
         
@@ -21,16 +21,24 @@ $(document).ready(function() {
 			encode 		: true
 		})
             .done(function(risp) {
+                console.log(risp)
                 $(".progress_cont").toggleClass("dn");
                 if (risp.login) {
                     window.location.href = "public/strumenti.html";
                 } else {
-                    M.toast(risp.errore_login, 1000);
+                    M.toast({
+                        html: risp.errore_login,
+                        displayLength: 1000
+                    })
                 }
             })
 			.fail(function(risp) {
+                console.log(risp)
                 $(".progress_cont").toggleClass("dn");
-                M.toast(risp.errore, 1000);
+                M.toast({
+                        html: risp.errore,
+                        displayLength: 1000
+                    })
 			});
         });
         return false;
