@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <title>Building Impressive Presentations with Impress.js | Automating Presentations Backwards</title>
+        <style>
+            .slide{
+                border: 30px solid #297999;
+                color: #395B91;
+                font-size: 40px;
+                font-weight:bold;
+                width:800px;
+                margin:20px;
+                padding:40px;
+                height:500px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="impress" >
+            <div id="slide1" class="step slide" data-x="-500"   >
+                <div><h2>Slide 1</h2></div>
+            </div>
+
+            <div id="slide2" class="step slide" data-x="500"  >
+                <div><h2>Slide 2</h2></div>
+            </div>
+
+            <div id="slide3" class="step slide" data-x="1500"  >
+                <div><h2>Slide 3</h2></div>
+            </div>
+
+            <div id="slide4" class="step slide" data-x="2500"   >
+                <div><h2>Slide 4</h2></div>
+            </div>
+
+            <div id="overview" class="step" data-x="-500" data-y="0" data-scale="2" >
+            </div>
+        </div>
+        <script src="js/impress.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script>
+            var api = impress();
+            api.init();
+            
+            $(document).ready(function(){
+                var intreval = setInterval(function(){
+                    api.prev();
+                },5000);
+            });
+              
+            
+	
+        </script>
+    </body>
+</html>
+

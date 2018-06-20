@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <title>Building Impressive Presentations with Impress.js | Data Perspective</title>
+        <link href="http://fonts.googleapis.com/css?family=Oswald:bold|Arvo:bold|Cutive+bold|Orbitron:bold|Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+        <link href="css/transfsorm.css" rel="stylesheet" />
+        <style>
+            .slide{
+                border: 30px solid #297999;
+                color: #395B91;
+                font-size: 40px;
+                font-weight:bold;
+                width:300px;
+                margin:20px;
+                padding:40px;
+                height:200px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="impress" data-perspective="500">
+
+            <div id="slide1" class="step slide" data-x="-600" data-z="400"  data-rotate-y="-90" >
+                <div><h2>Slide 1</h2></div>
+            </div>
+
+            <div id="slide2" class="step slide" data-x="-1000" data-rotate-y="-180" >
+                <div><h2>Slide 2</h2></div>
+            </div>
+
+            <div id="slide3" class="step slide" data-x="-600" data-z="-400"  data-rotate-y="-270" >
+                <div><h2>Slide 3</h2></div>
+            </div>
+
+            <div id="slide4" class="step slide" data-x="-200"  data-rotate-y="-360" >
+                <div><h2>Slide 4</h2></div>
+            </div>
+
+            <div id="overview" class="step" data-x="-500" data-y="0" data-scale="2" >
+            </div>
+        </div>
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+    </body>
+</html>
+

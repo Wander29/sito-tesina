@@ -1,0 +1,5 @@
+#COMANDI ROUTER ACL:
+_(config-if)#ip access-group 1 in _--> Serial, appena entrano controlla ACL
+_(config)#access-list 1 deny 192.168.1.0 0.0.0.31
+_(config)#access-list 1 permit all
+_#show access-list
