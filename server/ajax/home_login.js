@@ -24,7 +24,7 @@ $(document).ready(function() {
                 console.log(risp)
                 $(".progress_cont").toggleClass("dn");
                 if (risp.login) {
-                    window.location.href = "public/strumenti.html";
+                    window.location.href = "public/home.html";
                 } else {
                     M.toast({
                         html: risp.errore_login,

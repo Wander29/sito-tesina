@@ -1,3 +1,8 @@
+<?php 
+    if (isset($_SESSION)){
+        session_destroy(); 
+    }
+?>
 <!doctype html>
 <html>
     <head>

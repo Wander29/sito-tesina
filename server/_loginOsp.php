@@ -16,7 +16,7 @@
 			}
 		} 
 		if (strpos($_SESSION['permessi'], "HOME") !== false) { 
-	        header('Location: ../public/strumenti.html');
+	        header('Location: ../public/home.html');
 	    }
 	    mysqli_close($connection); 
 	}
