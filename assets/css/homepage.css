@@ -67,6 +67,16 @@
   visibility: hidden;
   display: none; }
 
+.header-content h1 {
+  font-family: "Vollkorn SC" !important;
+  padding-bottom: 15px; }
+.header-content h2 {
+  font-family: "Nunito" !important;
+  padding-bottom: 15px; }
+.header-content h3 {
+  font-family: "Nunito";
+  font-size: 1.2rem; }
+
 .my-cont {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -111,7 +121,7 @@
     display: block;
     margin-bottom: 2rem;
     margin-top: 2rem; }
-    .header-content p > span {
+    .header-content p .nome-blurred {
       background-color: #FF006A;
       border-radius: 10px;
       padding: 10px;
@@ -119,6 +129,14 @@
       -o-box-shadow: 0 0 30px 30px #FF006A;
       -webkit-box-shadow: 0 0 30px 30px #FF006A;
       box-shadow: 0 0 30px 30px #FF006A; }
+    .header-content p .mat-blurred {
+      background-color: #FF006A;
+      border-radius: 10px;
+      padding: 4px;
+      -moz-box-shadow: 0 0 20px 20px #FF006A;
+      -o-box-shadow: 0 0 20px 20px #FF006A;
+      -webkit-box-shadow: 0 0 20px 20px #FF006A;
+      box-shadow: 0 0 20px 20px #FF006A; }
 
 #start-tab .enter-btn {
   border: 2px solid white;

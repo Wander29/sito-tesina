@@ -15,7 +15,7 @@
         <link rel="icon" href="assets/img/favicon.png">
         
         <link rel="stylesheet" href="lib/materialize-v1b/css/materialize.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        
         <link rel="stylesheet" href="assets/css/homepage.css">
         
         <script src="lib/jquery.js"></script>
@@ -32,8 +32,21 @@
         <div class="header-content">
             <div id="start-tab">
                 <div class="row">
-                    <div id="main-title"><h1>Tesina<span class="my-white"> 5°anno</span> Maturità<br><br>Limiti</h1></div>
-                    <p><span class="waves-effect waves-light">Ludovico Venturi <span class="my-white">5°AIA</span></span></p>
+                    <div id="main-title">
+                        <p>
+                            <span class="waves-effect waves-light mat-blurred">
+                                <span> <span class="my-white">Maturità &nbsp;2017/18</span></span>
+                            </span>
+                        </p>
+                        <h1>
+                            Informatica come <br><span class="my-white">superamento dei limiti umani </span>
+                        </h1>
+                    </div>
+                    <p>
+                        <span class="waves-effect waves-light nome-blurred">
+                            <span>Ludovico Venturi <span class="my-white">| 5°AIA</span></span>
+                        </span>
+                    </p>
                 </div>
                 <div class="enter-btn waves-effect waves-light" id='btn-log'><a href="#login-tab">ENTRA</a></div>
             </div>
