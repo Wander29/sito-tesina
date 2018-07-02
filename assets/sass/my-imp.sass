@@ -1,0 +1,122 @@
+@charset 'utf-8'
+@import _global
+@import "https://fonts.googleapis.com/css?family=Assistant|Nunito|Poiret+One|Vollkorn+SC"
+@import ../fonts/fonts.css
+//Variabili
+$pr-color: #FF006A
+$sec-color: #FC3571
+
+//Mixins
+=border-radius($radius) //Mixin, una sorta di funzione, richiamabil con +border-radius(parametri)
+  -moz-border-radius:         $radius
+  -o-border-radius:           $radius
+  -webkit-border-radius:      $radius
+  border-radius:              $radius
+
+=box-shadow($h-off, $v-off, $blur, $spread, $col) //h-offset v-offset blur spread color
+  -moz-box-shadow:            $h-off  $v-off $blur $spread $col 
+  -o-box-shadow:              $h-off  $v-off $blur $spread $col 
+  -webkit-box-shadow:         $h-off  $v-off $blur $spread $col 
+  box-shadow:                 $h-off  $v-off $blur $spread $col 
+
+=transition($what, $time)
+  -moz-transition:        $what $time // Mozilla
+  -o-transition:          $what $time // Opera
+  -webkit-transition:     $what $time // Safari
+  transition:             $what $time
+
+//Classi supporto, da usare con @extend %[nome]
+%bshdw-normale 
+  +box-shadow(10px, 10px, 15px, 10px, #dedede)
+
+%bshdw-hover1
+  +box-shadow(0, 0, 0, 20px, rgba(255,255,255,0))
+%bshdw-hover2
+  +box-shadow(0, 0, 0, 0, white)
+
+/* SELEZIONE MOUSE CLICK */
+::-moz-selection
+  background: $pr-color
+  color: white
+::-o-selection
+  background: $pr-color
+  color: white
+::-webkit-selection
+  background: $pr-color
+  color: white
+::selection
+  background: $pr-color
+  color: white
+
+#impress
+  h1
+    font-family: 'Vollkorn SC' !important
+    padding-bottom: 15px
+      
+  h2
+    font-family: 'Nunito' !important
+    padding-bottom: 15px
+
+  h3
+    font-family: 'Nunito'
+    font-size: 1.2rem
+
+  #overview
+    h1	
+      font-size: 10rem !important
+
+  #overview2
+    margin-left: 200px
+    width: 900px
+    h2
+      font-size: 4rem !important
+      text-align: right
+
+  .slide
+    text-shadow: 1px 1px 1px black
+    line-height: 1.3
+    font-size: 3rem
+    font-family: "Calibri light"
+    h2
+      font-size: 5rem
+      text-shadow: 4px 4px 10px black
+    .cit, .space
+      padding: 40px
+      border-radius: 10px
+      +box-shadow(2px, 2px, 6px, 2px, black)
+      background-color: #FFFAE8
+      color: black
+      line-height: 1
+      text-font-style: italic
+      text-shadow: 0px 0px 0px black
+      margin-top: 30px
+      margin-bottom: 30px
+    .cit::before
+      content: "\00ab"
+    .cit::after
+      content: "\00bb"
+    img
+      width: auto
+      max-width: 100%
+      margin: auto
+      border-radius: 10px
+      +box-shadow(2px, 2px, 20px, 2px, black)
+    .space
+      background-image: linear-gradient(to right bottom, #ffffff, #e4e4e4, #c9c9c9, #afafaf, #969696)
+
+
+//Classi supporto
+.my-white
+  color: white
+.shdw
+  @extend %bshdw-normale 
+
+.white
+  color: white !important
+
+.spazio
+  height: 100px
+
+.dn
+  display: none
+
