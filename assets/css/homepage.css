@@ -106,37 +106,39 @@
   left: 0;
   width: 100vw;
   z-index: 1;
-  background-color: #FF006A;
-  opacity: 0.65; }
+  background-image: linear-gradient(to right top, #641843, #6c154a, #741152, #7c0d5a, #830663);
+  opacity: 0.7; }
 
 .header-content {
   z-index: 2;
   color: black;
   margin: auto; }
   .header-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 0; }
   .header-content p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     display: block;
-    margin-bottom: 2rem;
-    margin-top: 2rem; }
+    margin-bottom: 50px;
+    margin-top: 50px; }
     .header-content p .nome-blurred {
       background-color: #FF006A;
       border-radius: 10px;
       padding: 10px;
-      -moz-box-shadow: 0 0 30px 30px #FF006A;
-      -o-box-shadow: 0 0 30px 30px #FF006A;
-      -webkit-box-shadow: 0 0 30px 30px #FF006A;
-      box-shadow: 0 0 30px 30px #FF006A; }
+      -moz-box-shadow: 0 0 30px 8px #FF006A;
+      -o-box-shadow: 0 0 30px 8px #FF006A;
+      -webkit-box-shadow: 0 0 30px 8px #FF006A;
+      box-shadow: 0 0 30px 8px #FF006A; }
     .header-content p .mat-blurred {
       background-color: #FF006A;
       border-radius: 10px;
       padding: 4px;
-      -moz-box-shadow: 0 0 20px 20px #FF006A;
-      -o-box-shadow: 0 0 20px 20px #FF006A;
-      -webkit-box-shadow: 0 0 20px 20px #FF006A;
-      box-shadow: 0 0 20px 20px #FF006A; }
+      -moz-box-shadow: 0 0 20px 8px #FF006A;
+      -o-box-shadow: 0 0 20px 8px #FF006A;
+      -webkit-box-shadow: 0 0 20px 8px #FF006A;
+      box-shadow: 0 0 20px 8px #FF006A; }
+  .header-content #maturita {
+    margin-top: -30px; }
 
 #start-tab .enter-btn {
   border: 2px solid white;

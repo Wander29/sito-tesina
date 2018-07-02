@@ -2,106 +2,108 @@
 @import _global
 
 .my-cont
-	padding-left: 1rem
-	padding-right: 1rem
-	margin: auto
-	text-align: center
-	height: 100vh
-	display: flex
-	align-items: center
-	color: #FFF
+  padding-left: 1rem
+  padding-right: 1rem
+  margin: auto
+  text-align: center
+  height: 100vh
+  display: flex
+  align-items: center
+  color: #FFF
 
-	.fullscreen-video-wrap
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100vh
-		overflow: hidden
+  .fullscreen-video-wrap
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    overflow: hidden
 
-		video
-			min-height: 100%
-			min-width: 100%
+    video
+      min-height: 100%
+      min-width: 100%
 
-	#main-title
-		text-shadow: 3px 3px 20px #FFF
+  #main-title
+    text-shadow: 3px 3px 20px #FFF
 // Copre tutta la pagina (sfondo sopra al video)
 .header-overlay 
-	height: 100vh
-	position: absolute
-	top: 0
-	left: 0
-	width: 100vw
-	z-index: 1
-	background-color: $pr-color
-	opacity: 0.65
+  height: 100vh
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  z-index: 1
+  background-image: linear-gradient(to right top, #641843, #6c154a, #741152, #7c0d5a, #830663)
+  opacity: 0.7
 
 .header-content
-	z-index: 2
-	color: black
-	margin: auto
+  z-index: 2
+  color: black
+  margin: auto
 
-	h1
-		font-size: 3rem
-		margin-bottom: 0
-	p
-		font-size: 1.5rem
-		display: block
-		margin-bottom: 2rem
-		margin-top: 2rem
+  h1
+    font-size: 4rem
+    margin-bottom: 0
+  p
+    font-size: 1.8rem
+    display: block
+    margin-bottom: 50px
+    margin-top: 50px
 
-		.nome-blurred
-			background-color: $pr-color
-			border-radius: 10px
-			padding: 10px
-			+box-shadow(0, 0, 30px, 30px, $pr-color)
-		.mat-blurred
-			background-color: $pr-color
-			border-radius: 10px
-			padding: 4px
-			+box-shadow(0, 0, 20px, 20px, $pr-color)
+    .nome-blurred
+      background-color: $pr-color
+      border-radius: 10px
+      padding: 10px
+      +box-shadow(0, 0, 30px, 8px, $pr-color)
+    .mat-blurred
+      background-color: $pr-color
+      border-radius: 10px
+      padding: 4px
+      +box-shadow(0, 0, 20px, 8px, $pr-color)
+  #maturita
+    margin-top: -30px
 
 #start-tab
-	.enter-btn
-		border: 2px solid white
-		background: $pr-color
-		color: #FFF
-		font-size: 1.2rem
-		padding: 1rem 2rem
-		cursor: pointer
-		opacity: 0.6
-		+transition(box-shadow, 0.4s)
-		+border-radius(50px)
-		@extend %bshdw-hover1
+  .enter-btn
+    border: 2px solid white
+    background: $pr-color
+    color: #FFF
+    font-size: 1.2rem
+    padding: 1rem 2rem
+    cursor: pointer
+    opacity: 0.6
+    +transition(box-shadow, 0.4s)
+    +border-radius(50px)
+    @extend %bshdw-hover1
 
-	.enter-btn:hover
-		opacity: 1
-		@extend %bshdw-hover2
+  .enter-btn:hover
+    opacity: 1
+    @extend %bshdw-hover2
 
 #login-tab
-	width: 60vw !important
-	z-index: 5
+  width: 60vw !important
+  z-index: 5
 
-	#wrap-login 
-		opacity: 0.8
-		background-color: #FFEDF5
-		padding: 30px 30px 15px 30px
-		+border-radius(30px)
+  #wrap-login 
+    opacity: 0.8
+    background-color: #FFEDF5
+    padding: 30px 30px 15px 30px
+    +border-radius(30px)
 
-	#wrap-ospite
-		padding: 30px 30px 15px 30px
-		background-color: #FF9EDD
-		margin: 0
-		border-radius: 30px
+  #wrap-ospite
+    padding: 30px 30px 15px 30px
+    background-color: #FF9EDD
+    margin: 0
+    border-radius: 30px
 
-	.btn-submit-aut 
-		border: 1px dotted black
-		opacity: 0.6
-	.btn-submit-aut:hover
-		opacity: 1
-		background-color: $sec-color
+  .btn-submit-aut 
+    border: 1px dotted black
+    opacity: 0.6
+  .btn-submit-aut:hover
+    opacity: 1
+    background-color: $sec-color
 
 @media(max-width: 500px)
 .my-cont
-	padding-right: 3rem
-	padding-left: 3rem
+  padding-right: 3rem
+  padding-left: 3rem

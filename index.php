@@ -33,7 +33,7 @@
             <div id="start-tab">
                 <div class="row">
                     <div id="main-title">
-                        <p>
+                        <p id="maturita">
                             <span class="waves-effect waves-light mat-blurred">
                                 <span> <span class="my-white">Maturità &nbsp;2017/18</span></span>
                             </span>
@@ -41,14 +41,14 @@
                         <h1>
                             Informatica come <br><span class="my-white">superamento dei limiti umani </span>
                         </h1>
-                    </div>
+                    </div><br>
                     <p>
                         <span class="waves-effect waves-light nome-blurred">
                             <span>Ludovico Venturi <span class="my-white">| 5°AIA</span></span>
                         </span>
                     </p>
-                </div>
-                <div class="enter-btn waves-effect waves-light" id='btn-log'><a href="#login-tab">ENTRA</a></div>
+                </div><br>
+                <div class="enter-btn waves-effect waves-light" id='btn-log'><a href="#login-tab" style="color:white!important">ENTRA</a></div>
             </div>
 
             <div id="login-tab" class="hide-tab">
